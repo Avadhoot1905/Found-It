@@ -23,8 +23,8 @@ const Main: React.FC = () => {
 
       
       <div className="flex-grow p-6 overflow-x-hidden">
-        <header className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl ">Welcome, User_name</h1>
+        <header className="flex justify-between items-end mb-6 ">
+          <h1 className="text-2xl p-8 font-bold text-cyan-900">Welcome, User_name</h1>
         
           <input
             type="text"
