@@ -1,3 +1,5 @@
+'use client'; /* to ensure its only client side rendered*/
+
 import React, { useState } from 'react';
 
 const Sidebar: React.FC = () => {
