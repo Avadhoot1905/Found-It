@@ -5,30 +5,56 @@ const Sidebar: React.FC = () => {
 
   return (
     <>
-      <div className={`fixed inset-y-0 left-0 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-50 bg-gray-800 w-64 p-5 text-white`}>
-        <button className="absolute top-4 right-4 text-white" onClick={() => setIsOpen(!isOpen)}>
-          X
-        </button>
-        <div className="flex flex-col space-y-4">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold">Foundit</h2>
-          </div>
-          <ul className="space-y-2">
-            <li><a href="#" className="block py-2 hover:bg-gray-600 rounded">Home</a></li>
-            <li><a href="#" className="block py-2 hover:bg-gray-600 rounded">Found</a></li>
-            <li><a href="#" className="block py-2 hover:bg-gray-600 rounded">Lost</a></li>
-            <li><a href="#" className="block py-2 hover:bg-gray-600 rounded">Profile</a></li>
-            <li><a href="#" className="block py-2 hover:bg-gray-600 rounded">Settings</a></li>
-            <li><a href="#" className="block py-2 hover:bg-gray-600 rounded">About</a></li>
-          </ul>
-        </div>
-      </div>
+      {/* Hamburger button */}
       <button
-        className="fixed top-4 left-4 bg-gray-800 text-white p-2 rounded z-50"
-        onClick={() => setIsOpen(!isOpen)}
+        className="fixed top-4 left-4 z-50 bg-gray-800 text-white p-2 rounded hover:bg-gray-700 transition-colors"
+        onClick={() => setIsOpen(true)}
       >
         ☰
       </button>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transform transition-transform duration-300 ease-in-out z-40 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        {/* Close button */}
+        <button
+          className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+          onClick={() => setIsOpen(false)}
+        >
+          <span className="text-xl">×</span>
+        </button>
+
+        <div className="p-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold">Foundit</h2>
+          </div>
+          <nav>
+            <ul className="space-y-4">
+              {['Home', 'Found', 'Lost', 'Profile', 'Settings', 'About'].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="block py-2 px-4 hover:bg-gray-700 rounded transition-colors"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
     </>
   );
 };
