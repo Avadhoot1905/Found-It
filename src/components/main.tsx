@@ -44,11 +44,11 @@ const Main: React.FC = () => {
         <section className="mb-10">
           <h2 className="text-xl font-semibold mb-4">Recently found</h2>
           <div
-            className="container flex space-x-6 min-w-max overflow-x-scroll"
+            className="flex space-x-6 overflow-x-auto px-2 py-4 scroll-smooth"
             onWheel={handleScroll}  // Add scroll handler
           >
             {[...Array(5)].map((_, index) => (
-              <div key={index} className="w-72">
+              <div key={index} className="w-72 flex-shrink-0">
                 <Card
                   title="Product name"
                   location="Location"
@@ -63,11 +63,11 @@ const Main: React.FC = () => {
         <section>
           <h2 className="text-xl font-semibold mb-4">Recently lost</h2>
           <div
-            className="container flex space-x-6 min-w-max overflow-x-scroll"
+            className="flex space-x-6 overflow-x-auto px-2 py-4 scroll-smooth"
             onWheel={handleScroll}  // Add scroll handler
           >
             {[...Array(5)].map((_, index) => (
-              <div key={index} className="w-72">
+              <div key={index} className="w-72 flex-shrink-0">
                 <Card
                   title="Product name"
                   location="Lost by: Person"
