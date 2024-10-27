@@ -10,7 +10,7 @@ const Card: React.FC<CardProps> = ({ title, location, time }) => {
   return (
     <div className="bg-[#28AFB096] p-4 rounded-lg shadow-md">
     <img
-      src="/assets/helo kity.jpg" 
+      src="/assets/sample.png" 
       alt={title}                  //background: #19647E;
       width={300} 
       height={100}
