@@ -5,11 +5,15 @@ import React, { useState } from 'react';
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleLogout = () => {
+    console.log('Logging out...');
+  };
+
   return (
     <>
       {!isOpen && (
         <button
-          className="fixed top-4 left-4 z-50 bg-gray-800 text-white p-2 rounded hover:bg-gray-700 transition-colors"
+          className="fixed top-4 left-4 z-50 bg-gray-800 text-white p-1 rounded hover:bg-gray-700 transition-colors"
           onClick={() => setIsOpen(true)}
         >
           Menu ☰
@@ -51,6 +55,15 @@ const Sidebar: React.FC = () => {
                   </a>
                 </li>
               ))}
+             <li>
+                <a
+                  href="#"
+                  onClick={handleLogout}
+                  className="block py-2 px-4 text-red-600 hover:bg-gray-700 rounded transition-colors"
+                >
+                  Logout
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
