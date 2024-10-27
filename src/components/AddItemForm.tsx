@@ -11,7 +11,7 @@ const AddItemForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             <div className="w-full max-w-md rounded-lg bg-cyan-700 p-8 shadow-lg border-gray-700 border-opacity-15 border-4 relative z-10">
                 <div className='flex justify-between items-center mb-4'>
                     <button
-                        className="text-white bg-cyan-900 px-4 py-2 rounded-md hover:bg-cyan-700"
+                        className="text-white bg-cyan-800 px-4 py-2 rounded-md hover:bg-cyan-900"
                         onClick={() => console.log('Add Item clicked')} // Add functionality as needed
                     >
                         Add
