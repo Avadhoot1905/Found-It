@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageUpload from './UploadImage';
 
 const AddItemForm: React.FC = () => {
     return (
@@ -8,6 +9,7 @@ const AddItemForm: React.FC = () => {
                     <h2 className='flex justify-center items-center text-gray-100 text-3xl font-bold'>
                         Add New Item 
                     </h2>
+                    
                 </div>
                 <br/>
                 <input
@@ -17,17 +19,26 @@ const AddItemForm: React.FC = () => {
                 />
                 <input
                     type="text"
-                    className="p-2 border border-gray-400 rounded-md w-1/3 ml-14 focus:outline-none text-lg"
+                    className="p-2 border border-gray-400 translate-x-2 rounded-md w-1/3 ml-14 focus:outline-none text-lg"
                     placeholder="Time"
                 />
                 <br/>
                 <br/>
                 <textarea
                     id="description"
-                    style={{ width: '81.5%' }}
+                    style={{ width: '84%' }}
                     className="flex justify-center translate-x-7 px-2 py-2 pt-1 h-full text-lg border border-gray-300 rounded-md shadow-sm focus:outline-none "
                     placeholder="Enter a description for the item"
                 />
+                <br/>
+                <h2
+                className='flex justify-start items-center text-gray-100 text-xl font-bold translate-x-7'>
+                        Image Upload and Preview:
+                </h2>
+                <br/>
+                <div className='translate-x-7'>
+                    <ImageUpload />
+                </div>
             </div>
         </div>
     );

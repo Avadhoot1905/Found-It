@@ -85,7 +85,9 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
   };
 
   return (
-    <div className="max-w-xl">
+    <div 
+      style = {{width: "84%"}}    
+      >
       <label
         className={`flex justify-center w-full h-32 px-4 transition bg-white border-2 ${
           isDragging ? "border-blue-400 bg-blue-50" : "border-gray-300"
