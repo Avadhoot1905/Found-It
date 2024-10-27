@@ -24,7 +24,7 @@ const Main: React.FC = () => {
       
       <div className="flex-grow p-6 overflow-x-hidden">
         <header className="flex justify-between items-end mb-6 ">
-          <h1 className="text-2xl p-8 font-bold text-cyan-900">Welcome, User_name</h1>
+          <h1 className="text-4xl p-8 font-bold text-cyan-900">Welcome, User_name</h1>
         
           <input
             type="text"
@@ -36,7 +36,7 @@ const Main: React.FC = () => {
             style={{ top: '20px', right: '20px' }}
             onClick={() => alert("Add Item clicked!")}
           >
-          Add Item
+          + Add Item
           </button>
         </header>
 
