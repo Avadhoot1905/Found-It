@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
           className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
           onClick={() => setIsOpen(false)}
         >
-          <span className="text-xl">×</span>
+          <span className="text-2xl">×</span>
         </button>
 
         <div className="p-6">
@@ -40,7 +40,7 @@ const Sidebar: React.FC = () => {
             <img 
               src="/assets/foundit.png"
               alt="FoundIt" 
-              className="w-[130px] h-[84px]"
+              className="w-[130px] h-[84px] translate-x-8"
             />
           </div>
           <nav>
