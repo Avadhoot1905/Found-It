@@ -7,7 +7,7 @@ const LandingPage: React.FC = () => {
   const router = useRouter();
 
   const handleLoginClick = () => {
-    router.push('/main'); // Adjust this path as per your project structure
+    router.push('/main');
   };
 
   return (
@@ -16,7 +16,7 @@ const LandingPage: React.FC = () => {
       {/* Top Image */}
       <div className="mt-8 mb-4">
         <img 
-          src="assets/foundit.png" // Replace with your actual top image path
+          src="assets/foundit.png"
           alt="Top Image"
           className="w-[200px] h-[200px] object-contain"
         />
