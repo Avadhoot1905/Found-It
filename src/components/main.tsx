@@ -31,6 +31,13 @@ const Main: React.FC = () => {
             className="p-2 border border-gray-300 rounded-md"
             placeholder="Search..."
           />
+          <button
+            className="bg-teal-500 text-white rounded-md px-4 py-2 hover:bg-teal-600 absolute"
+            style={{ top: '20px', right: '20px' }}
+            onClick={() => alert("Add Item clicked!")}
+          >
+          Add Item
+          </button>
         </header>
 
         {/* Recently Found Section */}
