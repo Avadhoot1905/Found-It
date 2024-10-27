@@ -1,4 +1,4 @@
-'use client'; /* to ensure it's only client-side rendered */
+'use client'; 
 
 import React, { useState } from 'react';
 
@@ -45,7 +45,7 @@ const Sidebar: React.FC = () => {
           </div>
           <nav>
             <ul className="space-y-4">
-              {['Home', 'Found', 'Lost', 'Profile', 'Settings', 'About'].map((item) => (
+              {['Home', 'Found', 'Lost', 'Profile'].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
