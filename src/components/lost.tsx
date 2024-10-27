@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Card from './Card';
 import AddItemButton from './Addbutton';
-import AddItemForm from './AddItemForm'; // Ensure this is imported
+import AddItemForm from './AddItemForm'; 
 
 const Lost: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); // Initialize the modal state
@@ -21,7 +21,7 @@ const Lost: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-pink-100 flex">
+    <div className="min-h-screen bg-white-100 flex">
       <Sidebar />
 
       <div className="flex-grow p-6 overflow-y-auto" onWheel={handleScroll}>
@@ -37,7 +37,7 @@ const Lost: React.FC = () => {
           />
           <button
             className="bg-cyan-900 font-bold text-white rounded-md px-5 py-4 hover:bg-cyan-700 absolute"
-            style={{ top: '50px', right: '20px' }} // Adjusted top value
+            style={{ top: '50px', right: '20px' }} 
             onClick={() => setIsModalOpen(true)}
           >
             + Add Item
