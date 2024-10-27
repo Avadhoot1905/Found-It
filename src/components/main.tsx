@@ -24,7 +24,8 @@ const Main: React.FC = () => {
       
       <div className="flex-grow p-6 overflow-x-hidden">
         <header className="flex justify-between items-end mb-6 ">
-          <h1 className="text-4xl p-8 font-bold text-cyan-900">Welcome, User_name</h1>
+          <h1 className="text-4xl p-8 font-bold text-cyan-900">Welcome <br></br>
+             <span className= "text-[#19647E]" >User_name</span></h1>
         
           <input
             type="text"
