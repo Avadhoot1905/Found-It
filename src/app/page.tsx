@@ -1,8 +1,8 @@
-import Main from "../components/main";
-import Found from "@/components/found";
+
+import Lost from "@/components/lost";
 
 export default function Home() {
   return (
-    <Found />
+    <Lost />
   );
 }
