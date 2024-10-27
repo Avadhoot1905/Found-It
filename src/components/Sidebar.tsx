@@ -1,19 +1,24 @@
-'use client'; /* to ensure its only client side rendered*/
+'use client'; /* to ensure it's only client-side rendered */
 
 import React, { useState } from 'react';
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleLogout = () => {
+    console.log('Logging out...');
+  };
+
   return (
     <>
-      {/* Hamburger button */}
-      <button
-        className="fixed top-4 left-4 z-50 bg-gray-800 text-white p-2 rounded hover:bg-gray-700 transition-colors"
-        onClick={() => setIsOpen(true)}
-      >
-        ☰
-      </button>
+      {!isOpen && (
+        <button
+          className="fixed top-4 left-4 z-50 bg-gray-800 text-white p-1 rounded hover:bg-gray-700 transition-colors"
+          onClick={() => setIsOpen(true)}
+        >
+          Menu ☰
+        </button>
+      )}
 
       {/* Sidebar */}
       <div
@@ -30,8 +35,13 @@ const Sidebar: React.FC = () => {
         </button>
 
         <div className="p-6">
+          {}
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold">Foundit</h2>
+            <img 
+              src="/assets/foundit.png"
+              alt="FoundIt" 
+              className="w-[130px] h-[84px]"
+            />
           </div>
           <nav>
             <ul className="space-y-4">
@@ -45,6 +55,15 @@ const Sidebar: React.FC = () => {
                   </a>
                 </li>
               ))}
+             <li>
+                <a
+                  href="#"
+                  onClick={handleLogout}
+                  className="block py-2 px-4 text-red-600 hover:bg-gray-700 rounded transition-colors"
+                >
+                  Logout
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
