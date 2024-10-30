@@ -7,7 +7,7 @@ const LandingPage: React.FC = () => {
   const router = useRouter();
 
   const handleLoginClick = () => {
-    router.push('/main');
+    router.push('/home');
   };
 
   return (
