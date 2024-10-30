@@ -45,19 +45,41 @@ const Sidebar: React.FC = () => {
           </div>
           <nav>
             <ul className="space-y-4">
-              {['Home', 'Found', 'Lost', 'Profile'].map((item) => (
-                <li key={item}>
+              <li key='Home'>
                   <a
-                    href="#"
+                    href="/home"
                     className="block py-2 px-4 hover:bg-gray-700 rounded transition-colors"
                   >
-                    {item}
+                    Home
                   </a>
                 </li>
-              ))}
+                <li key='Found'>
+                  <a
+                    href="/found"
+                    className="block py-2 px-4 hover:bg-gray-700 rounded transition-colors"
+                  >
+                    Found
+                  </a>
+                </li>
+              <li key='Lost'>
+                <a
+                  href="/lost"
+                  className="block py-2 px-4 hover:bg-gray-700 rounded transition-colors"
+                >
+                  Lost
+                </a>
+              </li>
+              <li key='Profile'>
+                <a
+                  href="/profile"
+                  className="block py-2 px-4 hover:bg-gray-700 rounded transition-colors"
+                >
+                  Profile
+                </a>
+              </li>
              <li>
                 <a
-                  href="#"
+                  href="/logout"
                   onClick={handleLogout}
                   className="block py-2 px-4 text-red-600 hover:bg-gray-700 rounded transition-colors"
                 >
