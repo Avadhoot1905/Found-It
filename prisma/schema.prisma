@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum PostType {
+  FOUND
+  LOST
+}
+
+model User {
+  id        String   @id @default(uuid()) @map("_id")
+  name      String
+  age       Int?
+  email     String   @unique
+  posts     Post[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  objName     String
+  type        PostType 
+  date        DateTime
+  time        DateTime
+  location    String
+  author      User     @relation(fields: [userId], references: [id])
+  userId      String   
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
